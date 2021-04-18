@@ -1,10 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
+from products import Product
 
 class MainApplication(tk.Frame):
-    """Class used to initialize the main application for displaying the changeover time from one product to another"""
+    """Initialize the main application for displaying the changeover time from one product to another"""
     
-    _PRODUCTS = ("Dai", "Krok", "Melk", "Milk", "Mint", "Mjol", "Ore", "Smi", "Schw")
+    #_PRODUCTS = ("Dai", "Krok", "Melk", "Milk", "Mint", "Mjol", "Ore", "Smi", "Schw")
+
 
     #Initialize master
     def __init__(self, master, *args, **kwargs):
@@ -14,17 +16,22 @@ class MainApplication(tk.Frame):
     #Create main window object
     def create_window(self):
         self.master.title("Changeover App")
-        self.master.geometry("600x600")
+        self.master.geometry("400x400")
         self.master.resizable(0,0)
         #master.config(bg="#ffffff")
+    
+    #Initialize
+    def list_products(self):
+        self._my_products = Product()
+        return self._my_products.list_all_products()
         
     #Initialize Widgets
     def create_widgets(self):
         self._intro_text = tk.Label(self.master, text="Select from the dropdown lists below to convert the changeover " \
             "time of different products", justify="center", wraplength=250, font=("Monospace", 10))
-        self._combobox_one = ttk.Combobox(self.master, value=self._PRODUCTS)
+        self._combobox_one = ttk.Combobox(self.master, value=self.list_products())
         self._equal_sign = tk.Label(self.master, text=" = ")
-        self._combobox_two = ttk.Combobox(self.master, value=self._PRODUCTS)
+        self._combobox_two = ttk.Combobox(self.master, value=self.list_products())
         self._convert_button = tk.Button(self.master, text='Convert')
     
     #Position Widgets with grid
@@ -41,7 +48,7 @@ def main():
     app = MainApplication(root)
     app.create_window()
     app.create_widgets()
-    app.position_widget()
+    app.position_widgets()
     root.mainloop()
 
 if __name__ == "__main__": main()
