@@ -3,18 +3,16 @@ from tkinter import ttk
 from products import Product
 
 class MainApplication(tk.Frame):
-    """Initialize the main application for displaying the changeover time from one product to another"""
+    """Display the changeover time from one product to another"""
     
-    #_PRODUCTS = ("Dai", "Krok", "Melk", "Milk", "Mint", "Mjol", "Ore", "Smi", "Schw")
-
-
     #Initialize master
     def __init__(self, master, *args, **kwargs):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
-        self._products = self.list_products()
-        self._prod1 = tk.StringVar(value=self._products[0])
-        self._prod2 = tk.StringVar(value=self._products[1])
+        self._product = Product()
+        self._list_products = self._product.list_all_products()
+        self._prod1 = tk.StringVar(value=self._list_products[0])
+        self._prod2 = tk.StringVar(value=self._list_products[1])
         
     #Create main window object
     def create_window(self):
@@ -23,18 +21,13 @@ class MainApplication(tk.Frame):
         self.master.resizable(0,0)
         #master.config(bg="#ffffff")
     
-    #Initialize list of available products
-    def list_products(self):
-        self._my_products = Product()
-        return self._my_products.list_all_products()
-       
     #Initialize Widgets
     def create_widgets(self):
         self._intro_text = tk.Label(self.master, text="Select from the dropdown list below to convert from " \
             "one product to another", justify="center", wraplength=250, font=('Arial', 14))
-        self._combobox_one = ttk.Combobox(self.master, values=self.list_products(), textvariable=self._prod1)
+        self._combobox_one = ttk.Combobox(self.master, values=self._list_products, textvariable=self._prod1)
         self._equal_sign = tk.Label(self.master, text=" = ", font=('Arial', 16))
-        self._combobox_two = ttk.Combobox(self.master, state='readonly', values=self.list_products(), textvariable=self._prod2)
+        self._combobox_two = ttk.Combobox(self.master, state='readonly', values=self._list_products, textvariable=self._prod2)
         self._convert_button = tk.Button(self.master, text='Convert', command=self.get_products, font=('Arial', 12))
         self._code_label = tk.Label(self.master, text='Code', width=8, font=('Arial', 12))
         self._group_label = tk.Label(self.master, text='Group', width=8, font=('Arial', 12))
@@ -61,20 +54,26 @@ class MainApplication(tk.Frame):
     
     #Get products from dropdown list
     def get_products(self):
-        self._prod1 = self._combobox_one.get()
-        self._prod2 = self._combobox_two.get()
-        return(self._prod1, self._prod2)
+        prod1 = self._combobox_one.get()
+        prod2 = self._combobox_two.get()
+        print(prod1, prod2)
+        self._product = Product(prod1=prod1, prod2=prod2)
+        return self._product.locate_product()
+    
+    #Display the products to output fields
+    def display_products(self):
+        key, val = self.get_products()
+        print(key, val)
 
 
         
-
 def main():
     root = tk.Tk()
     app = MainApplication(root)
     app.create_window()
     app.create_widgets()
     app.position_widgets()
-    app.get_products()
+    app.display_products()
     root.mainloop()
 
 if __name__ == "__main__": main()
