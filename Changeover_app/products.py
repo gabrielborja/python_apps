@@ -29,13 +29,15 @@ class Product():
     def list_all_products(self):
         return list(self._DF.index)
     
-    
     #Locate a product code, group and changeover time
     def locate_product(self):
-        my_dict = self._DF.xs(self.prod1, axis=0, level=None)[self.prod2].to_dict()
-        print(my_dict)
-        return my_dict
-    
-    
+        try:
+            my_dict = self._DF.xs(self.prod1, axis=0, level=None)[self.prod2].to_dict()
+            my_keys = [k[i] for k in my_dict.keys() for i in range(2)]
+            xo_min = [v for v in my_dict.values()]
+            return (my_keys[0], my_keys[1], xo_min[0])
+        except KeyError:
+            pass
+        
 product1 = Product('Prod_1', 'Prod_3')
 product2 = Product('Prod_4', 'Prod_20')
