@@ -14,9 +14,16 @@ Use fork to download a copy of this repo into your machine.
 
 See requirements.txt file
 
+python==3.9.*
+numpy==1.20.2
+pandas==1.2.4
+python-dateutil==2.8.1
+pytz==2021.1
+six==1.15.0
+
 ## **Authors**
 
-* **Gabriel Borja** - *Initial work* - [GitHub repo here](https://github.com/gabrielborja)
+* **Gabriel Borja** - *Initial work* - [GitHub link](https://github.com/gabrielborja)
 
 ## **License**
 
@@ -24,4 +31,4 @@ This project is licensed under the MIT License - see [MIT license](https://opens
 
 ## Acknowledgments
 
-* Mondelez Oslo team
+* Mondelēz Oslo team
