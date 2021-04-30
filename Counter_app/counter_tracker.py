@@ -8,7 +8,7 @@ class MainApplication(tk.Frame):
     def __init__(self, master, *args, **kwargs):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
-        self.master.title('Events APP')
+        self.master.title('Counter APP')
         self.paned_window = ttk.PanedWindow(master, orient=tk.HORIZONTAL)
         self.paned_window.pack(fill=tk.BOTH, expand=True)
 
