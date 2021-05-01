@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from datetime import datetime
 
 class MainApplication(tk.Frame):
     """Application used to track events versus time"""
@@ -34,10 +35,19 @@ class MainApplication(tk.Frame):
         #self.button11 = ttk.Button(self.frame2, text='11', command=lambda: self.callback(11))
         #self.button12 = ttk.Button(self.frame2, text='12', command=lambda: self.callback(12))
     
+    def check_time(self):
+        """Function used to return a datetime object with milliseconds precision"""
+        return str(datetime.now())
+
     #Create callback fuction
     def callback(self, num):
         """Callback factory. Calling it returns function with the number of the button pressed"""
         return lambda: print(num)
+
+        events_dict = {}
+        td = self.check_time()
+        button = str(self.callback(num))
+        lambda: print(events_dict.update({td: button}))
         #def _callback():
         #    print(num)
         #return _callback
