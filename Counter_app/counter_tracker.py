@@ -42,12 +42,8 @@ class MainApplication(tk.Frame):
     #Create callback fuction
     def callback(self, num):
         """Callback factory. Calling it returns function with the number of the button pressed"""
-        return lambda: print(num)
+        return lambda: print(f'Time: {self.check_time()}, Button: {num}')
 
-        events_dict = {}
-        td = self.check_time()
-        button = str(self.callback(num))
-        lambda: print(events_dict.update({td: button}))
         #def _callback():
         #    print(num)
         #return _callback
