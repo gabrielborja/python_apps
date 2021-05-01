@@ -37,17 +37,18 @@ class MainApplication(tk.Frame):
     #Create callback fuction
     def callback(self, num):
         """Callback factory. Calling it returns function with the number of the button pressed"""
-        def _callback():
-            print(num)
-        return _callback
+        return lambda: print(num)
+        #def _callback():
+        #    print(num)
+        #return _callback
 
     #Initialize Widgets
-    def create_widgets(self):
+    def create_buttons(self):
         names = (str(i+1) for i in range(36)) #Create str names for the buttons
         self.button = []
         for i, name in enumerate(names):
             self.button.append(ttk.Button(self.frame2, text=name, command=self.callback(i+1)))
-            row,col=divmod(i, 3)
+            row,col=divmod(i, 3) #Denominator marks max number of columns
             self.button[i].grid(row=row, column=col, columnspan=1, padx=10, pady=10, ipadx=15)
 
 
@@ -55,7 +56,7 @@ def main():
     root = tk.Tk()
     app = MainApplication(root)
     app.create_frames()
-    app.create_widgets()
+    app.create_buttons()
     root.mainloop()
 
 if __name__ == "__main__": main()
