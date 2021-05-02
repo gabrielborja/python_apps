@@ -12,6 +12,7 @@ class MainApplication(tk.Frame):
         self.master.title('Counter APP')
         self.paned_window = ttk.PanedWindow(master, orient=tk.HORIZONTAL)
         self.paned_window.pack(fill=tk.BOTH, expand=True)
+        self.counter = {}
 
     #Create Frames inside paned window
     def create_frames(self):
@@ -20,21 +21,7 @@ class MainApplication(tk.Frame):
         self.paned_window.add(self.frame1, weight=2)
         self.paned_window.add(self.frame2, weight=3)
     
-    #Initialize Widgets
-    #def create_widgets(self):
-        #self.button1 = ttk.Button(self.frame2, text='1', command=lambda: self.callback(1))
-        #self.button2 = ttk.Button(self.frame2, text='2', command=lambda: self.callback(2))
-        #self.button3 = ttk.Button(self.frame2, text='3', command=lambda: self.callback(3))
-        #self.button4 = ttk.Button(self.frame2, text='4', command=lambda: self.callback(4))
-        #self.button5 = ttk.Button(self.frame2, text='5', command=lambda: self.callback(5))
-        #self.button6 = ttk.Button(self.frame2, text='6', command=lambda: self.callback(6))
-        #self.button7 = ttk.Button(self.frame2, text='7', command=lambda: self.callback(7))
-        #self.button8 = ttk.Button(self.frame2, text='8', command=lambda: self.callback(8))
-        #self.button9 = ttk.Button(self.frame2, text='9', command=lambda: self.callback(9))
-        #self.button10 = ttk.Button(self.frame2, text='10', command=lambda: self.callback(10))
-        #self.button11 = ttk.Button(self.frame2, text='11', command=lambda: self.callback(11))
-        #self.button12 = ttk.Button(self.frame2, text='12', command=lambda: self.callback(12))
-    
+    #Return current date and time
     def check_time(self):
         """Function used to return a datetime object with milliseconds precision"""
         return str(datetime.now())
@@ -42,7 +29,7 @@ class MainApplication(tk.Frame):
     #Create callback fuction
     def callback(self, num):
         """Callback factory. Calling it returns function with the number of the button pressed"""
-        return lambda: print(f'Time: {self.check_time()}, Button: {num}')
+        return lambda: print((self.check_time(), num))
 
         #def _callback():
         #    print(num)
