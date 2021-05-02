@@ -29,7 +29,16 @@ class MainApplication(tk.Frame):
     #Create callback fuction
     def callback(self, num):
         """Callback factory. Calling it returns function with the number of the button pressed"""
-        return lambda: print((self.check_time(), num))
+        #def _get_button_clicked():
+        #    self.counter.update({self.check_time(): num})
+        #return _get_button_clicked
+        return lambda: num
+    
+    def register_events(self):
+        try:
+            print(self.counter.update({self.check_time(): self.callback(num)}))
+        except: TypeError()
+
 
         #def _callback():
         #    print(num)
@@ -50,6 +59,8 @@ def main():
     app = MainApplication(root)
     app.create_frames()
     app.create_buttons()
+    my_dict = app.register_events()
+    print(my_dict)
     root.mainloop()
 
 if __name__ == "__main__": main()
