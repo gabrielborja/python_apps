@@ -12,7 +12,7 @@ class MainApplication(tk.Frame):
         self.master.title('Counter APP')
         self.paned_window = ttk.PanedWindow(master, orient=tk.HORIZONTAL)
         self.paned_window.pack(fill=tk.BOTH, expand=True)
-        self.counter = {}
+        self.counter = tk.StringVar()
 
     #Create Frames inside paned window
     def create_frames(self):
@@ -27,31 +27,42 @@ class MainApplication(tk.Frame):
         return str(datetime.now())
 
     #Create callback fuction
-    def callback(self, num):
-        """Callback factory. Calling it returns function with the number of the button pressed"""
-        #def _get_button_clicked():
-        #    self.counter.update({self.check_time(): num})
-        #return _get_button_clicked
-        return lambda: num
-    
-    def register_events(self):
-        try:
-            print(self.counter.update({self.check_time(): self.callback(num)}))
-        except: TypeError()
-
-
+    def register_events(self, num):
+        """Callback factory. Calling it returns function with the current time and
+        the number of the button pressed"""
+        my_event = tk.StringVar()
+        my_event = (self.check_time(), num)
+        print(my_event)
         #def _callback():
         #    print(num)
         #return _callback
+    
+    def save_events(self, func):
+        """Save events to a list of tuples"""
+        pass
 
     #Initialize Widgets
     def create_buttons(self):
-        names = (str(i+1) for i in range(36)) #Create str names for the buttons
+        #Create Listbox and Scrollar for from Frame 1
+        self.listbox = tk.Listbox(self.frame1, bg='white', height=33, width=35)
+        self.listbox.grid(row=0, column=0, rowspan=1, padx=10, pady=10)
+        self.scroll = tk.Scrollbar(self.frame1)
+        self.scroll.grid(row=0, column=1, rowspan=1, pady=10)
+
+        #Configure Listbox and Scrollbar for from Frame 1
+        self.listbox.configure(yscrollcommand=self.scroll.set)
+        self.scroll.configure(command=self.listbox.yview)
+
+        #Create Buttons for Frame 2
+        names = (str(i) for i in range(36)) #Create str names for the buttons
         self.button = []
         for i, name in enumerate(names):
-            self.button.append(ttk.Button(self.frame2, text=name, command=self.callback(i+1)))
+            self.button.append(ttk.Button(self.frame2, text=name, command=lambda: self.register_events(i)))
             row,col=divmod(i, 3) #Denominator marks max number of columns
             self.button[i].grid(row=row, column=col, columnspan=1, padx=10, pady=10, ipadx=15)
+            self.button50 = ttk.Button(self.frame2, text='50', command=lambda: self.register_events(50))
+            self.button50.grid(row=36, column=0, columnspan=1, padx=10, pady=10, ipadx=15)
+        
 
 
 def main():
@@ -59,8 +70,6 @@ def main():
     app = MainApplication(root)
     app.create_frames()
     app.create_buttons()
-    my_dict = app.register_events()
-    print(my_dict)
     root.mainloop()
 
 if __name__ == "__main__": main()
