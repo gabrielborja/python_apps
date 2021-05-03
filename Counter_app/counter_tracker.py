@@ -3,7 +3,7 @@ from tkinter import ttk
 from datetime import datetime
 
 class MainApplication(tk.Frame):
-    """Application used to track events versus time"""
+    """Python GUI Application used to track events versus time"""
     
     #Initialize master and paned window
     def __init__(self, master, *args, **kwargs):
@@ -12,7 +12,7 @@ class MainApplication(tk.Frame):
         self.master.title('Counter APP')
         self.paned_window = ttk.PanedWindow(master, orient=tk.HORIZONTAL)
         self.paned_window.pack(fill=tk.BOTH, expand=True)
-        self.counter = tk.StringVar()
+        self._events_counter = [] #Initialize empty list to store button events
 
     #Create Frames inside paned window
     def create_frames(self):
@@ -25,6 +25,10 @@ class MainApplication(tk.Frame):
     def check_time(self):
         """Function used to return a datetime object with milliseconds precision"""
         return str(datetime.now())
+    
+    def add_event(self, num):
+        """Append each button event to a list"""
+        self._events_counter.append((self.check_time(), num))
 
     #Create callback fuction
     def register_events(self, num):
@@ -32,14 +36,10 @@ class MainApplication(tk.Frame):
         the number of the button pressed"""
         my_event = tk.StringVar()
         my_event = (self.check_time(), num)
-        print(my_event)
+        return my_event
         #def _callback():
         #    print(num)
         #return _callback
-    
-    def save_events(self, func):
-        """Save events to a list of tuples"""
-        pass
 
     #Initialize Widgets
     def create_buttons(self):
@@ -57,11 +57,11 @@ class MainApplication(tk.Frame):
         names = (str(i) for i in range(36)) #Create str names for the buttons
         self.button = []
         for i, name in enumerate(names):
-            self.button.append(ttk.Button(self.frame2, text=name, command=lambda: self.register_events(i)))
+            self.button.append(ttk.Button(self.frame2, text=name, command=self.register_events(i)))
             row,col=divmod(i, 3) #Denominator marks max number of columns
             self.button[i].grid(row=row, column=col, columnspan=1, padx=10, pady=10, ipadx=15)
-            self.button50 = ttk.Button(self.frame2, text='50', command=lambda: self.register_events(50))
-            self.button50.grid(row=36, column=0, columnspan=1, padx=10, pady=10, ipadx=15)
+        self.button50 = ttk.Button(self.frame2, text='50', command=lambda: self.add_event(50))
+        self.button50.grid(row=36, column=0, columnspan=1, padx=10, pady=10, ipadx=15)
         
 
 
@@ -71,5 +71,6 @@ def main():
     app.create_frames()
     app.create_buttons()
     root.mainloop()
+    print(app._events_counter)
 
 if __name__ == "__main__": main()
