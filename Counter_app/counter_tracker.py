@@ -33,11 +33,9 @@ class MainApplication(tk.Frame):
     def register_events(self, num):
         """Callback factory. Calling it returns the current time and
         the number of the button pressed"""
-        my_event = tk.StringVar()
-        my_event = (self.check_time(), num)
-        return my_event
+        return lambda: self._events_counter.append((self.check_time(), num))
         #def _callback():
-        #    print(num)
+        #    self._events_counter.append((self.check_time(), num))
         #return _callback
 
     def create_widgets(self):
@@ -54,11 +52,11 @@ class MainApplication(tk.Frame):
         names = (str(i) for i in range(36)) #Create str names for the buttons
         #self.button = []
         for i, name in enumerate(names):
-            self.button.append(ttk.Button(self.frame2, text=name, command=lambda: self.add_event(i)))
+            self._buttons.append(ttk.Button(self.frame2, text=name, command=self.register_events(i)))
             row,col=divmod(i, 3) #Denominator marks max number of columns
             self._buttons[i].grid(row=row, column=col, columnspan=1, padx=10, pady=10, ipadx=15)
-        self.button50 = ttk.Button(self.frame2, text='50', command=lambda: self.add_event(50))
-        self.button50.grid(row=36, column=0, columnspan=1, padx=10, pady=10, ipadx=15)
+        #self.button50 = ttk.Button(self.frame2, text='50', command=lambda: self.add_event(50))
+        #self.button50.grid(row=36, column=0, columnspan=1, padx=10, pady=10, ipadx=15)
 
 
 def main():
