@@ -5,34 +5,33 @@ from datetime import datetime
 class MainApplication(tk.Frame):
     """Python GUI Application used to track events versus time"""
     
-    #Initialize master and paned window
     def __init__(self, master, *args, **kwargs):
+        """Initialize master and paned window"""
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
         self.master.title('Counter APP')
         self.paned_window = ttk.PanedWindow(master, orient=tk.HORIZONTAL)
         self.paned_window.pack(fill=tk.BOTH, expand=True)
+        self._buttons = []
         self._events_counter = [] #Initialize empty list to store button events
 
-    #Create Frames inside paned window
     def create_frames(self):
+        """Create frames inside paned window"""
         self.frame1 = ttk.Frame(self.paned_window, width=200, height=500, relief=tk.SUNKEN)
         self.frame2 = ttk.Frame(self.paned_window, width=300, height=500, relief=tk.SUNKEN)
         self.paned_window.add(self.frame1, weight=2)
         self.paned_window.add(self.frame2, weight=3)
     
-    #Return current date and time
     def check_time(self):
-        """Function used to return a datetime object with milliseconds precision"""
+        """Returns the current datetime"""
         return str(datetime.now())
     
     def add_event(self, num):
-        """Append each button event to a list"""
+        """Appends each button event to a list"""
         self._events_counter.append((self.check_time(), num))
 
-    #Create callback fuction
     def register_events(self, num):
-        """Callback factory. Calling it returns function with the current time and
+        """Callback factory. Calling it returns the current time and
         the number of the button pressed"""
         my_event = tk.StringVar()
         my_event = (self.check_time(), num)
@@ -41,34 +40,32 @@ class MainApplication(tk.Frame):
         #    print(num)
         #return _callback
 
-    #Initialize Widgets
-    def create_buttons(self):
-        #Create Listbox and Scrollar for from Frame 1
+    def create_widgets(self):
+        """Initialize Listbox and Scrollbar"""
         self.listbox = tk.Listbox(self.frame1, bg='white', height=33, width=35)
         self.listbox.grid(row=0, column=0, rowspan=1, padx=10, pady=10)
         self.scroll = tk.Scrollbar(self.frame1)
         self.scroll.grid(row=0, column=1, rowspan=1, pady=10)
-
-        #Configure Listbox and Scrollbar for from Frame 1
         self.listbox.configure(yscrollcommand=self.scroll.set)
         self.scroll.configure(command=self.listbox.yview)
-
-        #Create Buttons for Frame 2
+    
+    def create_buttons(self):
+        """Initialize buttons for Frame 2"""
         names = (str(i) for i in range(36)) #Create str names for the buttons
-        self.button = []
+        #self.button = []
         for i, name in enumerate(names):
-            self.button.append(ttk.Button(self.frame2, text=name, command=self.register_events(i)))
+            self.button.append(ttk.Button(self.frame2, text=name, command=lambda: self.add_event(i)))
             row,col=divmod(i, 3) #Denominator marks max number of columns
-            self.button[i].grid(row=row, column=col, columnspan=1, padx=10, pady=10, ipadx=15)
+            self._buttons[i].grid(row=row, column=col, columnspan=1, padx=10, pady=10, ipadx=15)
         self.button50 = ttk.Button(self.frame2, text='50', command=lambda: self.add_event(50))
         self.button50.grid(row=36, column=0, columnspan=1, padx=10, pady=10, ipadx=15)
-        
 
 
 def main():
     root = tk.Tk()
     app = MainApplication(root)
     app.create_frames()
+    app.create_widgets()
     app.create_buttons()
     root.mainloop()
     print(app._events_counter)
