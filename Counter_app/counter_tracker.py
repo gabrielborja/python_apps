@@ -17,16 +17,17 @@ class MainApplication(tk.Frame):
 
     def check_time(self):
         """Returns the current datetime"""
-        return str(datetime.now())
-    
-    def add_event(self, num):
-        """Appends each button event to a list"""
-        self._events_counter.append((self.check_time(), num))
+        return (datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
-    def register_events(self, num):
-        """Callback factory. Calling it returns the current time and
-        the number of the button pressed"""
-        return lambda: self._events_counter.append((self.check_time(), num))
+    def display_records(self):
+        """Display the list of buttons clicked"""
+        self.listbox.delete(0, tk.END)
+        return [self.listbox.insert(tk.END, '\n'.join(str(i))) for i in self._events_counter]
+
+    def add_event(self, num):
+        """Callback factory. Calling it returns the current time, the number of
+        the button pressed and displays the list of buttons clicked"""
+        return lambda: (self._events_counter.append((self.check_time(), num)), self.display_records())
         #def _callback():
         #    self._events_counter.append((self.check_time(), num))
         #return _callback
@@ -52,7 +53,7 @@ class MainApplication(tk.Frame):
         names = (str(i) for i in range(36)) #Create str names for the buttons
         #self.button = []
         for i, name in enumerate(names):
-            self._buttons.append(ttk.Button(self.frame2, text=name, command=self.register_events(i)))
+            self._buttons.append(ttk.Button(self.frame2, text=name, command=self.add_event(i)))
             row,col=divmod(i, 3) #Denominator marks max number of columns
             self._buttons[i].grid(row=row, column=col, columnspan=1, padx=10, pady=10, ipadx=15)
         #self.button50 = ttk.Button(self.frame2, text='50', command=lambda: self.add_event(50))
@@ -65,6 +66,7 @@ def main():
     app.create_frames()
     app.create_widgets()
     app.create_buttons()
+    app.display_records()
     root.mainloop()
     print(app._events_counter)
 
