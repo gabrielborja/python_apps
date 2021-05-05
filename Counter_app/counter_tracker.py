@@ -15,13 +15,6 @@ class MainApplication(tk.Frame):
         self._buttons = []
         self._events_counter = [] #Initialize empty list to store button events
 
-    def create_frames(self):
-        """Create frames inside paned window"""
-        self.frame1 = ttk.Frame(self.paned_window, width=200, height=500, relief=tk.SUNKEN)
-        self.frame2 = ttk.Frame(self.paned_window, width=300, height=500, relief=tk.SUNKEN)
-        self.paned_window.add(self.frame1, weight=2)
-        self.paned_window.add(self.frame2, weight=3)
-    
     def check_time(self):
         """Returns the current datetime"""
         return str(datetime.now())
@@ -37,6 +30,13 @@ class MainApplication(tk.Frame):
         #def _callback():
         #    self._events_counter.append((self.check_time(), num))
         #return _callback
+    
+    def create_frames(self):
+        """Create frames inside paned window"""
+        self.frame1 = ttk.Frame(self.paned_window, width=200, height=500, relief=tk.SUNKEN)
+        self.frame2 = ttk.Frame(self.paned_window, width=300, height=500, relief=tk.SUNKEN)
+        self.paned_window.add(self.frame1, weight=2)
+        self.paned_window.add(self.frame2, weight=3)
 
     def create_widgets(self):
         """Initialize Listbox and Scrollbar"""
