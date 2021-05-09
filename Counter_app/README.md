@@ -7,7 +7,7 @@ Counting the number of events from an observed process (i.e. quantity, defects, 
 The COUNTER APP built with Python helps address this issue. A datetime object (with micro-seconds precision) is generated every time a button is pressed from the GUI built with Tkinter. The MainApplication has a paned window to the left that displays all the events that have been tracked in descending order, and shows the cumulative count as well. When the user is ready to finish collecting the data, the save button allows to write all the records to a csv file in the local drive.
 
 ## **GUI**
-<img scr="images/counter_app_img.png">
+<img src="images/counter_app_img.png">
 
 ## **Getting Started**
 
