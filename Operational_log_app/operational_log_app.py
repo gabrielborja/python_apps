@@ -9,13 +9,12 @@ class Feedback:
         master.title('Operational Log APP')
         master.geometry('500x615')
         master.resizable(False, False)
-        master.configure(background='#383838')
         
         self.style = ttk.Style()
-        self.style.configure('TFrame', background='#383838')
+        #self.style.configure('TFrame')
         self.style.configure('Header.TLabel', font=('Arial', 18, 'bold'))  
         self.style.configure('TButton')
-        self.style.configure('TLabel', background='#383838', foreground='#C5E478', font=('Arial', 11))
+        self.style.configure('TLabel', font=('Arial', 11))
 
         self.frame_header = ttk.Frame(master)
         self.frame_header.pack()
@@ -25,17 +24,17 @@ class Feedback:
         ttk.Label(self.frame_header, text = 'Anlegg Driftslogg', style = 'Header.TLabel').grid(row=0, column=1, padx=15, pady=15)
         ttk.Label(self.frame_header, wraplength = 250,
                   text = ('Velkommen til programmet for å registrere informasjonen fra Anlegget.\n\n'
-                  'Vennligst skriv ned kommentarene nedenfor.')).grid(row=1, column=1, padx=20)
+                  'Vennligst skriv kommentarene nedenfor.')).grid(row=1, column=1, padx=20)
         
         self.frame_content = ttk.Frame(master)
         self.frame_content.pack()
 
-        ttk.Label(self.frame_content, text = 'Skift:').grid(row=0, column=0, pady=5, sticky='sw')
-        ttk.Label(self.frame_content, text = 'Maskin:').grid(row=0, column=1, pady=5, sticky='sw')
-        ttk.Label(self.frame_content, text = 'Kommentarer:').grid(row=2, column=0, pady=5, sticky='sw')
+        ttk.Label(self.frame_content, text = 'Skift:').grid(row=0, column=0, pady=5, padx=5, sticky='sw')
+        ttk.Label(self.frame_content, text = 'Maskin:').grid(row=0, column=1, pady=5, padx=5, sticky='sw')
+        ttk.Label(self.frame_content, text = 'Kommentarer:').grid(row=2, column=0, pady=5, padx=5, sticky='sw')
 
-        self.entry_shift = ttk.Entry(self.frame_content, width=27, font=('Arial', 10), justify='left')
-        self.entry_machine = ttk.Entry(self.frame_content, width=27, font=('Arial', 10), justify='left')
+        self.entry_shift = ttk.Entry(self.frame_content, width=29, font=('Arial', 10), justify='left')
+        self.entry_machine = ttk.Entry(self.frame_content, width=29, font=('Arial', 10), justify='left')
         self.text_comments = tk.Text(self.frame_content, width=60, height=20, font=('Arial', 10))
         
         self.entry_shift.grid(row=1, column=0)
