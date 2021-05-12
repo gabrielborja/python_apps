@@ -7,7 +7,7 @@ class Feedback:
     def __init__(self, master):
         
         master.title('Operational Log APP')
-        master.geometry('500x615')
+        master.geometry('500x675')
         master.resizable(False, False)
         
         self.style = ttk.Style()
@@ -31,20 +31,23 @@ class Feedback:
 
         ttk.Label(self.frame_content, text = 'Skift:').grid(row=0, column=0, pady=5, padx=5, sticky='sw')
         ttk.Label(self.frame_content, text = 'Maskin:').grid(row=0, column=1, pady=5, padx=5, sticky='sw')
-        ttk.Label(self.frame_content, text = 'Kommentarer:').grid(row=2, column=0, pady=5, padx=5, sticky='sw')
+        ttk.Label(self.frame_content, text = 'Time:').grid(row=2, column=0, pady=5, padx=5, sticky='sw')
+        ttk.Label(self.frame_content, text = 'Kommentarer:').grid(row=4, column=0, pady=5, padx=5, sticky='sw')
 
         self.entry_shift = ttk.Entry(self.frame_content, width=29, font=('Arial', 10), justify='left')
         self.entry_machine = ttk.Entry(self.frame_content, width=29, font=('Arial', 10), justify='left')
+        self.entry_hour = ttk.Entry(self.frame_content, width=29, font=('Arial', 10), justify='left')
         self.text_comments = tk.Text(self.frame_content, width=60, height=20, font=('Arial', 10))
         
         self.entry_shift.grid(row=1, column=0)
         self.entry_machine.grid(row=1, column=1)
-        self.text_comments.grid(row=3, column=0, columnspan=2, padx=5)
+        self.entry_hour.grid(row=3, column=0)
+        self.text_comments.grid(row=5, column=0, columnspan=2, padx=5)
 
         ttk.Button(self.frame_content, text = 'Submit', style='TButton',
-                   command=self.submit).grid(row=4, column=0, padx=5, pady=15, sticky='e')
+                   command=self.submit).grid(row=6, column=0, padx=5, pady=15, sticky='e')
         ttk.Button(self.frame_content, text = 'Clear', style='TButton',
-                   command=self.clear).grid(row=4, column=1, padx=5, pady=15, sticky='w')
+                   command=self.clear).grid(row=6, column=1, padx=5, pady=15, sticky='w')
 
     def submit(self):
         print(f'Skift: {self.entry_shift.get()}')
