@@ -2,10 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 
-class Feedback:
-
+class MainApplication:
     def __init__(self, master):
-        
         master.title('Operational Log APP')
         master.geometry('500x675')
         master.resizable(False, False)
@@ -29,13 +27,13 @@ class Feedback:
         self.frame_content = ttk.Frame(master)
         self.frame_content.pack()
 
-        ttk.Label(self.frame_content, text = 'Skift:').grid(row=0, column=0, pady=5, padx=5, sticky='sw')
-        ttk.Label(self.frame_content, text = 'Maskin:').grid(row=0, column=1, pady=5, padx=5, sticky='sw')
+        ttk.Label(self.frame_content, text = 'Shift:').grid(row=0, column=0, pady=5, padx=5, sticky='sw')
+        ttk.Label(self.frame_content, text = 'Machine:').grid(row=0, column=1, pady=5, padx=5, sticky='sw')
         ttk.Label(self.frame_content, text = 'Time:').grid(row=2, column=0, pady=5, padx=5, sticky='sw')
-        ttk.Label(self.frame_content, text = 'Kommentarer:').grid(row=4, column=0, pady=5, padx=5, sticky='sw')
+        ttk.Label(self.frame_content, text = 'Comments:').grid(row=4, column=0, pady=5, padx=5, sticky='sw')
 
-        self.entry_shift = ttk.Entry(self.frame_content, width=29, font=('Arial', 10), justify='left')
-        self.entry_machine = ttk.Entry(self.frame_content, width=29, font=('Arial', 10), justify='left')
+        self.entry_shift = ttk.Combobox(self.frame_content, values=['Day', 'Afternoon', 'Night'], textvariable=['Day'], width=24, font=('Arial', 10), justify='left')
+        self.entry_machine = ttk.Combobox(self.frame_content, values=self.machine_list(), textvariable='Machine_1', width=24, font=('Arial', 10), justify='left')
         self.entry_hour = ttk.Entry(self.frame_content, width=29, font=('Arial', 10), justify='left')
         self.text_comments = tk.Text(self.frame_content, width=60, height=20, font=('Arial', 10))
         
@@ -49,6 +47,9 @@ class Feedback:
         ttk.Button(self.frame_content, text = 'Clear', style='TButton',
                    command=self.clear).grid(row=6, column=1, padx=5, pady=15, sticky='w')
 
+    def machine_list(self):
+        return [f'Machine_{i}' for i in range(1, 16)]
+
     def submit(self):
         print(f'Skift: {self.entry_shift.get()}')
         print(f'Maskin: {self.entry_machine.get()}')
@@ -61,10 +62,9 @@ class Feedback:
         self.entry_email.delete(0, tk.END)
         self.text_comments.delete(1.0, tk.END)
          
-def main():            
-    
+def main():
     root = tk.Tk()
-    feedback = Feedback(root)
+    app = MainApplication(root)
     root.mainloop()
     
 if __name__ == "__main__": main()
