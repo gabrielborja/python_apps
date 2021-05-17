@@ -14,6 +14,7 @@ class MainApplication:
         self.style.configure('TButton')
         self.style.configure('TLabel', font=('Arial', 11))
 
+        #Upper frame for handling the logo and title
         self.frame_header = ttk.Frame(master)
         self.frame_header.pack()
         
@@ -24,6 +25,7 @@ class MainApplication:
                   text = ('Welcome to the program to record data from the Moulding line.\n\n'
                   'Please write your comments below.')).grid(row=1, column=1, padx=20, pady=20)
         
+        #Lower frame for handling the content and save records
         self.frame_content = ttk.Frame(master)
         self.frame_content.pack()
 
@@ -52,19 +54,26 @@ class MainApplication:
                    command=self.clear).grid(row=6, column=1, padx=5, pady=15, ipadx=10, sticky='w')
 
     def machine_list(self):
+        """Pre-defined list of machines"""
         return [f'Machine_{i}' for i in range(1, 16)]
 
     def save_record(self):
-        print(f'Skift: {self.entry_shift.get()}')
-        print(f'Maskin: {self.entry_machine.get()}')
-        print(f'Kommentarer: {self.text_comments.get(1.0, tk.END)}')
+        """Save the date, name, shift, machine and comments from the entry forms"""
+        print(f'Date: {self.entry_date.get()}')
+        print(f'Name: {self.entry_name.get()}')
+        print(f'Shift: {self.entry_shift.get()}')
+        print(f'Machine: {self.entry_machine.get()}')
+        print(f'Comments: {self.text_comments.get(1.0, tk.END)}')
         self.clear()
-        messagebox.showinfo(title = 'Driftslogg', message = 'Kommentarer sendt!')
+        messagebox.showinfo(title = 'Moulding Line Log', message = 'Record saved!')
     
     def clear(self):
+        """Clear the content from the entry fields"""
+        self.entry_date.delete(0, tk.END)
         self.entry_name.delete(0, tk.END)
-        self.entry_email.delete(0, tk.END)
-        self.text_comments.delete(1.0, tk.END)
+        self.entry_shift.delete(0, tk.END)
+        self.entry_machine.delete(0, tk.END)
+        self.text_comments.delete(1.0, tk.END) #==> Text index must start with 1
          
 def main():
     root = tk.Tk()
