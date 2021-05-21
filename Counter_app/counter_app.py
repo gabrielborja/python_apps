@@ -18,12 +18,13 @@ class MainApplication(tk.Frame):
 
     def check_time(self):
         """Returns the current datetime"""
-        return (datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+        return (datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f"))
 
     def display_records(self):
         """Display the list of buttons clicked"""
         self.listbox.delete(0, tk.END)
         self.count_label.configure(text=f'Count: {len(self._events_counter)}')
+        self.sum_label.configure(text=f'Sum: {sum([int(self._events_counter[i][1]) for i, e in enumerate(self._events_counter)])}')
         return [self.listbox.insert(tk.END, '\n'.join(str(val))) for val in reversed(self._events_counter)]
 
     def add_event(self, num):
@@ -61,8 +62,10 @@ class MainApplication(tk.Frame):
         self.scrollbar.configure(command=self.listbox.yview)
         self.count_label = ttk.Label(self.frame1, text='Count:')
         self.count_label.grid(row=2, column=0, pady=3)
+        self.sum_label = ttk.Label(self.frame1, text='Sum:')
+        self.sum_label.grid(row=3, column=0, pady=3)
         self.save_button = ttk.Button(self.frame1, text='Save', command=self.save_to_csv)
-        self.save_button.grid(row=3, column=0, padx=10, pady=10)
+        self.save_button.grid(row=4, column=0, padx=10, pady=10)
         
     def create_buttons(self):
         """Initialize buttons for Frame 2"""
