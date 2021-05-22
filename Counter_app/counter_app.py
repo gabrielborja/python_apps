@@ -11,9 +11,10 @@ class MainApplication(tk.Frame):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
         self.master.title('Counter APP')
+        self.master.geometry('635x550+0+0')
         self.paned_window = ttk.PanedWindow(master, orient=tk.HORIZONTAL)
         self.paned_window.pack(fill=tk.BOTH, expand=True)
-        self._buttons = [] #Initialize empty list to store tkk Buttons
+        self._buttons = [] #Initialize empty list to store ttk Buttons
         self._events_counter = [] #Initialize empty list to store button events
 
     def check_time(self):
