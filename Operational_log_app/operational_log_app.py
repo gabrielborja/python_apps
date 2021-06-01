@@ -22,7 +22,7 @@ class MainApplication:
         ttk.Label(self.frame_header, image=self.logo).grid(row=0, column=0, rowspan=2)
         ttk.Label(self.frame_header, text = 'Operational Log', style = 'Header.TLabel').grid(row=0, column=1, padx=15, pady=15)
         ttk.Label(self.frame_header, wraplength = 250,
-                  text = ('Welcome to the program to record data from the Moulding line.\n\n'
+                  text = ('Welcome to the program to record data from the daily operations.\n\n'
                   'Please write your comments below.')).grid(row=1, column=1, padx=20, pady=20)
         
         #Lower frame for handling the content and save records
@@ -65,7 +65,7 @@ class MainApplication:
         print(f'Machine: {self.entry_machine.get()}')
         print(f'Comments: {self.text_comments.get(1.0, tk.END)}')
         self.clear()
-        messagebox.showinfo(title = 'Moulding Line Log', message = 'Record saved!')
+        messagebox.showinfo(title = 'Operational Log', message = 'Record saved!')
     
     def clear(self):
         """Clear the content from the entry fields"""
