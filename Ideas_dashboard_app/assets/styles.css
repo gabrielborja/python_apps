@@ -1,0 +1,25 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    background-color: #383838;
+}
+
+.main-layout {
+    /*padding: 16px 0 0 0;*/
+}
+
+.header-title {
+    color: #F7F7F7;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin: 2.5% 20% 2.5%;
+}
+
+.drop-down {
+    margin: 1% 20%;
+}
+
+.bar-chart {
+    margin: 2% 16%;
+}
