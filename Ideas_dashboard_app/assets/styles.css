@@ -20,6 +20,11 @@ body {
     margin: 1% 20%;
 }
 
+.graphs-containers {
+    display: flex;
+    position: relative;
+}
+
 .bar-chart {
-    margin: 2% 16%;
+    margin: 2% auto;
 }
