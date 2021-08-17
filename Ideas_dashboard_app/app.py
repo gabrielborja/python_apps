@@ -29,16 +29,21 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 # Setting up the app layout
 app.layout = html.Div(children=[
-    html.H1(children='Kaizen Management Dashboard',  className='header-title'),
+    html.H1(children='Ideas Management Dashboard',  className='header-title'),
 
     html.Div(children=[
-        dcc.Dropdown(id='Linje', options=[{'label': i, 'value': i} for i in df_area['Linje'].unique()], value='J4')],
-        className='drop-down'),
+        html.Div(children=[
+            dcc.Dropdown(id='Year', options=[{'label': i, 'value': i} for i in df_area['År'].unique()],
+            value='2021', clearable=False)], className='drop-down'),
+        html.Div(children=[
+            dcc.Dropdown(id='Line', options=[{'label': i, 'value': i} for i in df_area['Linje'].unique()],
+            value='J4', clearable=False)], className='drop-down'),
+    ], className='dropdown-container'),
 
     html.Div(children=[
         html.Div(children=[dcc.Graph(id='kaizens-graph')], className='bar-chart'),
         html.Div(children=[dcc.Graph(id='status-graph')], className='bar-chart')
-    ], className='graphs-containers')
+    ], className='graphs-container')
     
 ], className='main-layout')
 
@@ -46,20 +51,24 @@ app.layout = html.Div(children=[
 @app.callback(
     Output(component_id='kaizens-graph', component_property='figure'),
     Output(component_id='status-graph', component_property='figure'),
-    Input(component_id='Linje', component_property='value')
-)
-def update_graphs(selected_line):
-    df_kaizens = df_area[df_area['Linje']==selected_line]
-    df_completed = df_comp[df_comp['Linje']==selected_line]
+    [Input(component_id='Year', component_property='value'),
+    Input(component_id='Line', component_property='value')])
+
+def update_graphs(selected_year, selected_line):
+
+    df_kaizens = df_area[(df_area['År']==int(selected_year)) & (df_area['Linje']==selected_line)].copy()
+    df_completed = df_comp[(df_comp['År']==int(selected_year)) & (df_comp['Linje']==selected_line)].copy()
     
-    fig_1 = px.bar(df_kaizens, x='Månder', y='Kaizens',
-                    color='Område', title=f'Generated Kaizens in {selected_line}',
-                    category_orders={'Månder': ['May', 'June', 'July', 'August']},
-                    range_y=[0,25])
+    fig_1 = px.bar(df_kaizens, x='Månder', y='Kaizens', color='Område',
+                title=f'{selected_year} - Generated Ideas in {selected_line}',
+                category_orders={'Månder': ['May', 'June', 'July', 'August']},
+                range_y=[0,25])
     fig_1.add_hline(y=20)
 
-    fig_2 = px.bar(df_completed, x='Trinn', y='Status',
-                title=f'Completed Kaizens in {selected_line}')
+    fig_2 = px.bar(df_completed, x='Trinn', y='Status', color='Trinn',
+                title=f'{selected_year} - Completed Ideas in {selected_line}',
+                color_discrete_sequence=['#2A9D8F', '#800080'])
+    fig_2.layout.update(showlegend=False)
 
     return fig_1, fig_2
 
