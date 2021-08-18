@@ -4,21 +4,30 @@ body {
     background-color: #383838;
 }
 
-.main-layout {
-    /*padding: 16px 0 0 0;*/
-}
-
 .header-title {
     color: #F7F7F7;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     margin: 2% 20% 3%;
 }
 
-.drop-down {
+.dropdown-title {
+    /*width: 10%;*/
+    color:#F7F7F7;
+    text-align: center;
+    margin: 0.3% 4%;
+}
+
+.dropdown-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
     width: 10%;
     margin: auto 0.3%;
+    text-align: center;
 }
 
 .dropdown-container {
