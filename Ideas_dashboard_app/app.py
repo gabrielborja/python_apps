@@ -13,7 +13,7 @@ df['Dato'] = pd.to_datetime(df['Dato'])
 df = df.assign(År = df['Dato'].dt.year.astype(str),
                Månder = df['Dato'].dt.month_name())
 df_area = df.groupby(by=['År', 'Månder', 'Linje', 'Område']).agg(Kaizens = ('ID', 'count')).reset_index()
-df_comp = df.groupby(by=['År', 'Linje', 'Trinn']).agg(Status = ('ID', 'count')).reset_index()
+df_comp = df.groupby(by=['År', 'Linje', 'Trinn', 'Kriterier']).agg(Status = ('ID', 'count')).reset_index()
 
 #Generating external style sheet
 external_stylesheets = [
@@ -71,10 +71,10 @@ def update_graphs(selected_year, selected_line):
     fig_1.add_hline(y=20)
     fig_1.update_layout(title_x=0.5)
 
-    fig_2 = px.bar(df_completed, x='Trinn', y='Status', color='Trinn',
+    fig_2 = px.bar(df_completed, x='Trinn', y='Status', color='Kriterier',
                 title=f'{selected_year} - Completed Ideas in {selected_line}',
-                color_discrete_sequence=['#2A9D8F', '#800080'])
-    fig_2.layout.update(showlegend=False, title_x=0.5)
+                color_discrete_sequence=['#007FFF', '#2A9D8F', '#800080'])
+    fig_2.layout.update(title_x=0.5) #showlegend=False,
 
     return fig_1, fig_2
 
