@@ -14,6 +14,7 @@ df = df.assign(År = df['Dato'].dt.year.astype(str),
                Månder = df['Dato'].dt.month_name())
 df_area = df.groupby(by=['År', 'Månder', 'Linje', 'Område']).agg(Kaizens = ('ID', 'count')).reset_index()
 df_comp = df.groupby(by=['År', 'Linje', 'Trinn', 'Kriterier']).agg(Status = ('ID', 'count')).reset_index()
+df_person = df.groupby(by=['År', 'Linje', 'Trinn', 'Navn']).agg(Count = ('ID', 'count')).reset_index()
 
 #Generating external style sheet
 external_stylesheets = [
@@ -47,7 +48,8 @@ app.layout = html.Div(children=[
 
     html.Div(children=[
         html.Div(children=[dcc.Graph(id='kaizens-graph')], className='bar-chart'),
-        html.Div(children=[dcc.Graph(id='status-graph')], className='bar-chart')
+        html.Div(children=[dcc.Graph(id='status-graph')], className='bar-chart'),
+        html.Div(children=[dcc.Graph(id='p-graph')], className='bar-chart')
     ], className='graphs-container')
     
 ], className='main-layout')
@@ -56,6 +58,7 @@ app.layout = html.Div(children=[
 @app.callback(
     Output(component_id='kaizens-graph', component_property='figure'),
     Output(component_id='status-graph', component_property='figure'),
+    Output(component_id='p-graph', component_property='figure'),
     [Input(component_id='Year', component_property='value'),
     Input(component_id='Line', component_property='value')])
 
@@ -63,6 +66,7 @@ def update_graphs(selected_year, selected_line):
 
     df_kaizens = df_area[(df_area['År']==selected_year) & (df_area['Linje']==selected_line)].copy()
     df_completed = df_comp[(df_comp['År']==selected_year) & (df_comp['Linje']==selected_line)].copy()
+    df_per = df_person[(df_person['År']==selected_year) & (df_person['Linje']==selected_line)].copy()
     
     fig_1 = px.bar(df_kaizens, x='Månder', y='Kaizens', color='Område',
                 title=f'{selected_year} - Generated Ideas in {selected_line}',
@@ -76,7 +80,13 @@ def update_graphs(selected_year, selected_line):
                 color_discrete_sequence=['#007FFF', '#2A9D8F', '#800080'])
     fig_2.layout.update(title_x=0.5) #showlegend=False,
 
-    return fig_1, fig_2
+    fig_3 = px.bar(df_per, x='Navn', y='Count', color='Trinn',
+                title=f'{selected_year} - Generated Ideas per person in {selected_line}',
+                color_discrete_sequence=['#007FFF', '#2A9D8F', '#800080'])
+    fig_3.layout.update(title_x=0.5) #showlegend=False,
+
+
+    return fig_1, fig_2, fig_3
 
 # Running in local server
 if __name__ == '__main__':

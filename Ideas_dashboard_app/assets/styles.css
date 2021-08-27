@@ -38,6 +38,7 @@ body {
 .graphs-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .bar-chart {
