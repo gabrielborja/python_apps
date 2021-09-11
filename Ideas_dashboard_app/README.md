@@ -7,7 +7,7 @@ Many companies have an ideas generation system to follow up on different initiat
 Build a Dashboard app using Python🐍, Dash and Plotly which summarizes the performance of the ideas managament system, allowing the users to interact with various charts and use dropdown menus to visualize the results by different years and departments.
 
 ## **GUI**
-<img src="images/ideas_dashboard_img.png" width="400" height=290">
+<img src="images/ideas_dashboard_img.png" width="400" height="290">
 
 ## **Getting Started**
 
