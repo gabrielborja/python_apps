@@ -1,19 +1,30 @@
 #Import necessary libraries
-from typing import Optional
 import fastapi
-from fastapi.applications import FastAPI
 import uvicorn
+from typing import Optional
 
 #Create FastAPI instance
 api = fastapi.FastAPI()
+
+@api.get('/')
+def index():
+    body = "<html>" \
+           "<body style='padding: 10px;'>" \
+           "<h1>Welcome to my API</h1>" \
+           "<h2>FastAPI</h2>" \
+           "<div>" \
+           "Try it: <a href='/api/calculate?x=7&y=11'>/api/calculate?x=7&y=11</a>" \
+           "</div>" \
+           "</body>" \
+           "</html>"
+    return fastapi.responses.HTMLResponse(content=body)
 
 @api.get('/api/calculate')
 def calculate(x: int, y: int, z: Optional[int] = None):
 
     if z==0:
-        return fastapi.Response(content='{"ERROR": "Error, z cannot be zero (0)"}',
-                                media_type='application/json',
-                                status_code=400)
+        return fastapi.responses.JSONResponse(content={"ERROR": "Error, z cannot be zero (0)"},
+        status_code=400)
 
     value = x + y
 
