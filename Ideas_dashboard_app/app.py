@@ -12,9 +12,10 @@ df = df[df['Trinn']!='1_Pending']
 df['Dato'] = pd.to_datetime(df['Dato'])
 df = df.assign(År = df['Dato'].dt.year.astype(str),
                Månder = df['Dato'].dt.month_name())
-df_area = df.groupby(by=['År', 'Månder', 'Linje', 'Område']).agg(Kaizens = ('ID', 'count')).reset_index()
+df_area = df.groupby(by=['År', 'Månder', 'Linje', 'SGA']).agg(Kaizens = ('ID', 'count')).reset_index()
 df_comp = df.groupby(by=['År', 'Linje', 'Trinn', 'Kriterier']).agg(Status = ('ID', 'count')).reset_index()
-df_person = df.groupby(by=['År', 'Linje', 'Trinn', 'Navn']).agg(Count = ('ID', 'count')).reset_index()
+df_person = df.groupby(by=['År', 'Linje', 'SGA', 'Navn']).agg(Count = ('ID', 'count')).reset_index()
+navneliste = pd.read_csv('name_list.csv')['Navn'].tolist()
 
 #Generating external style sheet
 external_stylesheets = [
@@ -68,9 +69,9 @@ def update_graphs(selected_year, selected_line):
     df_completed = df_comp[(df_comp['År']==selected_year) & (df_comp['Linje']==selected_line)].copy()
     df_per = df_person[(df_person['År']==selected_year) & (df_person['Linje']==selected_line)].copy()
     
-    fig_1 = px.bar(df_kaizens, x='Månder', y='Kaizens', color='Område',
+    fig_1 = px.bar(df_kaizens, x='Månder', y='Kaizens', color='SGA',
                 title=f'{selected_year} - Generated Ideas in {selected_line}',
-                category_orders={'Månder': ['May', 'June', 'July', 'August']},
+                category_orders={'Månder': ['May', 'June', 'July', 'August', 'September']},
                 range_y=[0,25])
     fig_1.add_hline(y=20)
     fig_1.update_layout(title_x=0.5)
@@ -80,9 +81,10 @@ def update_graphs(selected_year, selected_line):
                 color_discrete_sequence=['#007FFF', '#2A9D8F', '#800080'])
     fig_2.layout.update(title_x=0.5) #showlegend=False,
 
-    fig_3 = px.bar(df_per, x='Navn', y='Count', color='Trinn',
-                title=f'{selected_year} - Generated Ideas per person in {selected_line}',
-                color_discrete_sequence=['#007FFF', '#2A9D8F', '#800080'])
+    fig_3 = px.bar(df_per, x='Navn', y='Count', color='SGA',
+                category_orders={'Navn': navneliste},
+                title=f'{selected_year} - Generated Ideas per person in {selected_line}')
+    fig_3.add_hline(y=12)
     fig_3.layout.update(title_x=0.5) #showlegend=False,
 
 

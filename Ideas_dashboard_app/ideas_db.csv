@@ -1,94 +1,112 @@
-﻿ID,Dato,Navn,Linje,Område,Beskrivelse,Løsning,Kriterier,Trinn
-1,11-May-21,As,J4,Anlegg,Produkt som sitter fast i former (heng). Store plater og biter som setter seg fast i pakkemaskiner. Heng som gjør at det blyr mye stopp,Bytte former oftere p.g.a bytte ac masse. Temperatur på tempmaskin. Utbanker. Kjedet i anlegget. Verdier på sjokolade. Kjøling og hastighet.,Kvalitet,2_Pågående
-2,11-May-21,Ki,J4,Anlegg,Elektrisk kabler til karamellkonteinere skal byttes. Kablene er ikke byttet ut å fører til risiko for strømulykker,Installere de kabeltromlene som er kjøpt inn til formålet,Sikkerhet,2_Pågående
-3,11-May-21,Ki,J4,Anlegg,"Ekstra ingrediensskrue har ingeng fast plass, ligger utsatt til",Kan vi lage oppheng?,Moral,2_Pågående
-4,11-May-21,Sø,J4,Kartonering,Lokkpåsetter singel noen ganger er det 2 lokk på neste eske etter stopp. Noen ganger er det intet lokk,Omprogrammere PLS således at maskinens selvvens resetter når en sikkerhetsdør åpner,Moral,2_Pågående
-5,11-May-21,To,J4,Schubert,Hull i ruller etter at Schubert har pakket dem.,Finn ut hvilken arm. Filme? Justering? Finner rigtig posisjon. Finne løsning,Kvalitet,2_Pågående
-6,11-May-21,Sh,J4,Pakkemaskiner,Limsøl på duken stopp og vask. Limsøl på duken som ædelegger rull og datomerking.,"Finne ut hvorfor det skjer ny limsystem, nye dyser, er dyer tett?",Kvalitet,2_Pågående
-7,11-May-21,He,J4,Anlegg,"Kaster henger på dør 1.00A, vanskelig og apne døren",Flytte til en annen vegg,Moral,3_Fullførte
-8,11-May-21,Jø,J4,Anlegg,"Oppheng rødt utstyr, montert på dør 1.00A i kjøkesone 7 må flyttes",Helst flyttes rundt hjørnet til ende,Moral,3_Fullførte
-9,12-May-21,Vi,J4,Anlegg,Manuell jekk til støper 2,Kjøpe elektrisk,Sikkerhet,1_Pending
-10,11-May-21,Øy,J4,Anlegg,Hengbiter  o støpeformer. Utbankere banker ikke ut alle sjokolade biter selv når temperaturgrenser er OK.,Flere pulserende utbankere der hvor nåsarende utbankere er,Kvalitet,1_Pending
-11,12-May-21,Vi,J4,Anlegg,Vanskelig tilgjengelig i messanin-høyde foran anlegget. Må ha lift for tilgang = Upraktisk for insp. Og vask etc.,Bygge platform?,Sikkerhet,1_Pending
-12,12-May-21,Ji,J4,Anlegg,Vanskelig tilgjengelig utstyr. Lagre på toppen av skap.,Finne nytt lagringssted,Moral,1_Pending
-13,12-May-21,Mo,J4,Anlegg,Problemer mellom kjøling og oppvarmingsvikt.,"Gå gjennom hele anlegget og se hvor det kan vare kjøling og oppvarming problemer,  dårling isolering, skadet plater.",Kvalitet,1_Pending
-14,12-May-21,El,J4,Anlegg,Vaskerom nord har defekt gulv og store sprekker i gulv,Reparasjon av gulv,Kvalitet,1_Pending
-15,12-May-21,Si,J4,Anlegg,Missing cover of chain on the right side of door 1.13B is short metal cover to protect a touch of chain.,Install a cover 100x10 cm to cover chain.,Sikkerhet,1_Pending
-16,12-May-21,Ki,J4,Anlegg,"Tømming, spøring osr av returtank til M1 tank. Mye utfordringer og problemer med hådtering av retur",Fjerne returtank og kjøre retur direkte til M1 tank,Sikkerhet,1_Pending
-17,12-May-21,Si,J4,Anlegg,Åpent område inntil kjede på støper 2. Mulighet for å stikke hånda inn til kjede.,"Gammelt deksel er for kort, må lages lengre. Lagge nytt deksel.",Sikkerhet,1_Pending
-18,12-May-21,Mo,J4,Anlegg,Når hylsestøper og bunnstøper og karamellstøper så kan det oppslå mye vrak og linjeforsinkelser. Fører til mye vrak og linjeforsinkelse hvis man ikke oppdager del i samme tid,Få noe lyd eller lys signal som gir beskjed når en av støperen stopper. Gjerne ha signaler både på anlegget og pakkesone.,Sikkerhet,1_Pending
-19,12-May-21,Mo,J4,Anlegg,Stadig mye heng i former. Mange av produktene vo kjører/støper far stadig mye heng i formene. Mye skylder av at det dårlige utbankere.,Sterkere sylinder og bedre banker som slår. Mer presis og i tilleg ikke ødelegger formene så mye. Skulle gjerne hatt mer slag i minutte.,Kvalitet,1_Pending
-20,12-May-21,Fa,J4,Anlegg,Mye karamell renner ned bak anlegget uten støper. Utigjengelig vanskelig å rengjøre. Det lekker unødig ned på anlegget/døra (Bak anlegget),Legge plast eller bedre tilgang. Tette overgangene.,Kvalitet,1_Pending
-21,12-May-21,Ji,J4,Pakkemaskiner,Deksel utmating. Dårlig løsning med teflontape,Ny løsning,Moral,1_Pending
-22,12-May-21,Sa,J4,Pakkemaskiner,Fingergardin foran agiator ødelagt. Fingrene glir ut under kjøring,Lag ny,Moral,1_Pending
-23,12-May-21,Sh,J4,Pakkemaskiner,Manglende merkingan el-skvive ved pakkemaskiner. Manglende merking.,Merking,Moral,1_Pending
-24,12-May-21,Ke,J4,Pakkemaskiner,Limsøl i pakkemaskiner. Nye limsøl i pakkemaskiner.,Bedre limløsning,Kvalitet,1_Pending
-25,12-May-21,Ji,J4,Pakkemaskiner,Ingeng fast plass til deksel. Deksel til pakkemaskin 3 til smilkjøring,Lage oppheng på deletralle,Moral,1_Pending
-26,12-May-21,Sh,J4,Pakkemaskiner,Vanskelig vaske buffer. Ikke LOTO.,Slik i gulv og spyle slange,Moral,1_Pending
-27,12-May-21,Sa,J4,Pakkemaskiner,Vanskelig rengjøring. Kantbånd som samler møkk.,Tjenne kantbånd og polere kant under,Moral,1_Pending
-28,12-May-21,Ke,J4,Pakkemaskiner,Vaskerom sør på pakkesia. Dårlig luft trykk i slange. Lite flexibel slange og dårlig trykk.,Slange trommel og ny blåsepistol,Sikkerhet,1_Pending
-29,12-May-21,Sh,J4,Pakkemaskiner,Vanskelig avlåsning av lim utstyr i pakkemaskin3. Mangler sikkerhetsbryter,Monter sikkerhetsbryter,Sikkerhet,1_Pending
-30,12-May-21,Ji,J4,Pakkemaskiner,Mye varer går til retur. Lite varer på første del av ristebord,2 fotoceller sann som på pakkemaskin 1,Sikkerhet,1_Pending
-31,12-May-21,Ke,J4,Pakkemaskiner,Paller forran DMS Tavle. Manglende tilgang til tavle,Fjerne paller,Moral,1_Pending
-32,12-May-21,Na,J4,Pakkemaskiner,Stadig dårlig stempel på rullene,Enten ny stemplingsystem eller prøve å bygge/endre på det som er. Kanskje en bedre plate. Få en plate som tåler mer eller andre løsninger som en gumi-valse,Kvalitet,1_Pending
-33,12-May-21,Ot,J4,Pakkemaskiner,Oppladbånd lommelytt mangler plastplass. Lommelytt lygyz lost på brakket til koster,Hylle,Moral,1_Pending
-34,11-May-21,Ot,J4,Anlegg,Missing safety guard on the back side of knives station (scraper). Missing cover (picture taken),Installing new cover (policarbon) with a slot for pulling the mass with scraper,Sikkerhet,1_Pending
-35,12-May-21,Sø,J4,Kartonering,Svert å se når en maskin i kartoneringsområdet feiler,En blink-lampe som lyser krafligt når der er feil på en av maskinene,Moral,1_Pending
-36,12-May-21,Ot,J4,Pakkemaskiner,"Vill ha fler svarta mattar. Behover svarta matter alt stå på, ved pakkemaskin på overstå delen. Båttne ergonomi.",Kopa mattar,Moral,1_Pending
-37,12-May-21,Ot,J4,Pakkemaskiner,Trenger speil for å se transportband. Kan ikke se overstå del av sapalbånd fra pakkemaskin 1 og 2.,Installere speil,Moral,1_Pending
-38,12-May-21,Ot,J4,Schubert,Ser int ved som hånder i Schubert-området. Kan ikke se om det krasjer ved lokkpasetter fra pakkemaskin 3 uten av springa i fra pakkemaskin 3.,Sett opp en speil,Moral,1_Pending
-39,12-May-21,Mo,J4,Schubert,"Bedre lys på område der kameraet leser rullene, eller en kveld kamera. Vi kan starte med å fjerne en platene som vi breter opp hele tiden. Se tegning.",Vi bruker teip for å holde den oppe. Vi bretter den altid opp for å få bedre lys inn sånn at det blir lettere for kamera å lese rullen,Kvalitet,1_Pending
-40,12-May-21,El,J4,Schubert,Sjokolade søl over motoren. Der rullen kommer at i kasser fra Schubert kan det falle på motoren som gjor at motoren bli veldig skitten.,Sette på ett deksel.,Moral,1_Pending
-41,12-May-21,Mo,J4,Kartonering,Mye limsøl og åpne lokk fra lokkpåseteren til singel.. Masse limsøl som fører til mye stopp og linjeforsinkelse + dårlige lokk på esken.,Enten ny lokkpåseter eller bygge om lokkpåseteren til ett bedre lim-prosses for lokkene med kanskje i stede for at den limer og senere går opp for å fesk lokket til eskene at hele prosessen skyer i samme plan.,Moral,1_Pending
-42,12-May-21,Mo,J4,Schubert,Ingeng lås/ventil lås som man kan sikre/låse ved vask. Det gjelder lufttrykk sykkemelt til multipakken,Trenger en ventil som man kan låse av.,Sikkerhet,1_Pending
-43,12-May-21,Mo,J4,Schubert,"Linjeforsinkelser og mer sparing av tid (effektivitet). Heisereiseren er litt for treig, så man får ikke lag på ekstra esker mens man kjører og i tilleg når man ikke kjører og har litt esker igjen på en pall som man ønsker å sende til palletering så tår det lang tid.",En karusell som Jensen 5 har eller en raskere heis,Moral,1_Pending
-44,12-May-21,Mo,J4,Schubert,Dårlig lås/feste for 2pk rullen som gjør at 2pk rullen blir stadig spist-opp.,Kanskje vi skull fatt oss feste som vi har på pakkemaskinen,Moral,1_Pending
-45,12-May-21,Ol,J4,Generell,Språk. Det blir brakt mye engelsk og noen japanske ord.,Bør skrives på norsk. Forberedre komunikasjonen vil også bli bedre og forståelse.,Moral,1_Pending
-46,12-May-21,Sa,J4,Kartonering,Tungt løsning for manuell kjøring. Dinasen pallet ned og avbrytter manuell kjøring,En skry eller lignende,Moral,1_Pending
-47,12-May-21,Ot,J4,Pakkemaskiner,Sluk på vaskerom er på høyeste punkt. Vann renner ikke ved,Fall mot sluk,Moral,1_Pending
-48,12-May-21,Na,J4,Generell,Dårlig kommunikasjon mellom kolegaer i mellom,Personalmøte/Avdelignsmøte,Moral,1_Pending
-49,12-May-21,Ml,J4,Generell,Mange forkortelser og ingen oversikt. De fleste forstår ikke hva forkortelsene slår for,Lage en oversikt til de forskjellige forkortelse-ordene. Lett tilgjengelig!,Moral,1_Pending
-50,12-May-21,As,J4,Generell,Gammel printer sort/hvil. Ønsker fargeprinter da vi må løpe rundt for å kopiere/skanner på andre avdelinger.,Ny printer/skanner med flere funksjoner,Moral,2_Pågående
-51,12-May-21,Ol,J4,Generell,"Alle skjemaer som operatorene skriver er i papirformat, og blir samlet inn av de forskjellige mottakere.",Alt for kunne skrives på PC/Pad og mottaker ser det vår det har blit endret på.,Moral,2_Pågående
-52,19-May-21,Ga,J4,Anlegg,Problemer ved oppstart på linje/anlegg når vi kjører massive produkter,Skrive en sjekkliste for å kontrollere oppstart på linje. Hvilken ting må gjøres før og hvilken oppgaver etterpå?,Moral,3_Fullførte
-53,26-May-21,Ga,J4,Anlegg,Problemer ved oppstart på linje/anlegg når vi kjører smil produkter. Omlegg tar lang tid.,Det finnes ikke en standard metode for å gjøre omlegg,Moral,3_Fullførte
-54,27-May-21,Øy,J4,Anlegg,"Vanskelig å sette LOTO lås på sykkerhetsbrytter i kjølekanal dør skal 1 øvre, LOTO-1-04-map.",Flytte eller snu boks til sikkerhetsbryter,Sikkerhet,2_Pågående
-55,28-May-21,Ga,J4,Anlegg,Risiko for å miste beger i støper når det tas ut tempererings prøve.,Lage en klype eller holder for å gjøre det enklere,Kvalitet,3_Fullførte
-56,28-May-21,Ga,J4,Anlegg,Risiko at plastdeksel faller ned til ingredyenssystemet.,Legg et deksel for å forhindre risiko at ting fåler til ingredienskontainer,Kvalitet,2_Pågående
-57,28-May-21,Ki,J4,Anlegg,Jogge anlegg i revers. Ved formkrasj må ofte anlegget kjøres i revers for å frigjøre former. Det finnes ingen god og trygg løsning på det i dag.,Låge en fjernkontroll med joggefunksjon i revers. Evt håndsveir på motor uten fast tilkobling,Sikkerhet,2_Pågående
-58,3-Jun-21,Ml,J4,Generell,Vanskelig å se hvilke oppgaver som behøver stopp. Passert på et sted hvor operatører og mekanikere må gå langt for å fylle ut.,Flytte fv-lister til vegg utenfor verksted,Moral,3_Fullførte
-59,3-Jun-21,Ki,J4,Anlegg,Stige forran støper2 er for lav når man skal jobbe over eller i støperen. Høyere stige vil føre til at gelender hindrer tilgang og risiko får å skalle i rør i taket.,Ny stige? Kan en høyere stige med mulighet for å åpne gelender i front skaffes i tilleg?,Kvalitet,2_Pågående
-60,3-Jun-21,Ki,J4,Anlegg,Sjokolade bommer i påfylling fra ingrediensskrue,"Lage en ny og fastmontert ""innsnauring"" på ingrediensskrue",Kvalitet,2_Pågående
-61,3-Jun-21,Ki,J4,Anlegg,Vanskelig å finne rør på forskjellige steder. Sjokkolade og karamellrør har ingen fast plass.,Ta ned å henge samtlige rør etter endt produksjon i et stativ på samme sted,Kvalitet,2_Pågående
-62,16-Jun-21,Sh,J4,Generell,Har ikke noe system for vask/tørk av gulvmatter,"Et vasket/tørke stativ til vaskerommet, elt flyttbart",Kvalitet,2_Pågående
-63,17-Jun-21,Vi,J4,Anlegg,Gulvet har høydeforskjell oppe i anlegget.,Installere en gulteip som ops på at det er en kant,Sikkerhet,3_Fullførte
-64,17-Jun-21,Mo,J4,Anlegg,Beskyttelseplaten til sirkulaskonspumpen er for kort.,Installere en ny plate,Sikkerhet,3_Fullførte
-65,17-Jun-21,To,J4,Anlegg,Mangler LOTO sikkerhetsventil for å ta ut luft i PIAB/ingredienssystem i messanin,Bestill og sette inn en LOTO sikkerhetsventil,Sikkerhet,2_Pågående
-66,22-Jun-21,Ki,J4,Anlegg,Mye sjokolade søl v/ lekasje på tempmaskin 1. Når det blir lekasje på tempmaskin renner mye sjokolade ut på gulvet gjennom små hull i alle hjørner,Lage proppertil de små hullene og lage et større drenerings hull i center front,Kvalitet,2_Pågående
-67,22-Jun-21,Ki,J4,Generell,Kner blir vonde når det vaskes. Mangler kneputer.,Det er ønske om å kjøpe 10 stk. knepute brett som kan ha fast plass på avdelingen slik at operatører kan rakst og enkelt beskytte knarene sine under arbeid på kne.,Sikkerhet,2_Pågående
-68,22-Jun-21,Ki,J4,Anlegg,Mye søppel på anlegget utenfor søppelkasser.,Anskaffe søppelsekkstativ ved styrepulten.,Kvalitet,2_Pågående
-69,22-Jun-21,Ki,J4,Kartonering,Mangler ofte SKU etiketter på multipakk. Fotocelle for SKU etiketter kommer ut av posisjon.,Flytte føleren til motsatt side slik at ingen flytter den ved uhell,Kvalitet,2_Pågående
-70,24-Jun-21,Ji,J4,Anlegg,"Risiko for å falle ned trappa opp av ingredienssystemet, mangler gult-svart teip",Installere en ny gult-svart teip og hold rekkvert signal.,Sikkerhet,3_Fullførte
-71,25-Jun-21,Ki,J4,Anlegg,Mye unødvendig papir. Vanskelig å finne den informasjon man trenger bland mye papir,Kaste alt som ikke er nødvending,Moral,3_Fullførte
-72,25-Jun-21,Ki,J4,Anlegg,Det er mulig å gå under hengende last og skalle i trucken.,Sette opp permanent sperreband rund rotator truck og skaffe sperreband stølper til avdelingen,Sikkerhet,2_Pågående
-73,25-Jun-21,Ki,J4,Anlegg,Ingredienssystemet er vanskelig å tømme.,Lenger rør med vinkel ut og programere en tømmefunksjon.,Kvalitet,2_Pågående
-74,28-Jun-21,Ki,J4,Anlegg,Vanskelig å holde det ryddig ved kontrollpolten. Mye papirer på anlegget,Det er ønske om å  fa whiteboard e.l. v/ styrepulten der kan alle papirer og informasjon henge synlig,Moral,3_Fullførte
-75,29-Jun-21,Ga,J4,Anlegg,Ulike hastigheter for å kjøre støpelinjen og pumper mellom forskjellige produkter,"Samle standardparametere for hvert produkt, og lag en tabell der alle operatører kan se og bruke",Moral,3_Fullførte
-76,1-Jul-21,To,J4,Generell,"Ting kan falle ned i trappa ved inngangen. Ting blir lagt på toppen av skapet i trappegangen. Kopper, flasker, esker, o.l. Kan falle ned i trappa hvor folk går.","Unngå a sette inn ting på skapet eller lage en bakvegg til skapet, slik at det ikke kan falle ned ting.",Moral,3_Fullførte
-77,1-Jul-21,To,J4,Anlegg,Teit rekkefølge i PKK-skjema. Mye frem og tilbake i PKKS-skjema for rekkefølge av nedskrivning av temperaturer.,"Endre rekkefølgen på trinnene i PKKS-skjemaet, slik at det er logisk rekkefølge av temperaturene nedskrivning",Kvalitet,3_Fullførte
-78,2-Jul-21,To,J4,Anlegg,"Manglende verktøy for knusing av daimkrokan. Klumpete/hard daim, vanskelig å knuse med små gjenstander.",Ønskelig med en jern rive med godt håndtak.,Kvalitet,2_Pågående
-79,5-Jul-21,Ga,J4,Generell,Mange papirer (produksjonsanvisning) brukes til å spore produksjonen.,Lag et nytt produksjonsanvisningsskjema som er enkelt å bruke og reduserer mengden papir som brukes,Kvalitet,3_Fullførte
-80,7-Jul-21,As,J4,Generell,Rettelse av artikkel oversikt. Mangler rød og grønn strøm. Ikke oppdatert. La inn ny artikler.,Lage ny skjema.,Moral,3_Fullførte
-81,8-Jul-21,Vk,J4,Anlegg,Dårlig plassering av luft trommel slange i veien ved form bytte.,Flytte den slik at den ikke hengen over formene.,Kvalitet,2_Pågående
-82,11-Jul-21,Al,J4,Kartonering,Weight control for the two-pack area is not working. Tolerances for the weight control systems is not up to date.,QA Coordinator and Process Engineer need to provide new tolerances to be set in the system for the different SKUs,Kvalitet,2_Pågående
-83,15-Jul-21,Ot,J4,Generell,"Lack of proper HMS board. There was a place for BOS and separate for QRP but was really hard to access, obstructed by pallets",Use the emergency exit door for safety purposes and build a new HMS board.,Sikkerhet,3_Fullførte
-84,16-Jul-21,Mo,J4,Anlegg,Flere steder i annleget både inne og utenfra er ikke helt tett som føver mellom kjøling og oppvarmingsvikt.,"Installere plater på 1.26A, 1.25A, 1.24A, 1.23A, 1.16A, 1.15A. Se bak dør 1.17A hvilken høyde de skal ligge på.",Kvalitet,3_Fullførte
-85,3-Aug-21,Ga,J4,Anlegg,Operatørene vet ikke når det er nødvendig for å reparere de manglende formene i anlegget,Lag en matrise for å definere et tringgerpunkt når formene skal repareres,Moral,3_Fullførte
-86,4-Aug-21,Ki,J4,Anlegg,Det kan vare vanskelig å se om det er riktig trykk på spennstrasjonene. Trykke kan avvike fra riktig trykk og føre til falsk stopp på anlegget.,Bytte til mere moderne manometer og merke hva som er riktig. Større skive med merking i glasset. Telleren kan gjerne ha maks på 7 bar.,Sikkerhet,2_Pågående
-87,6-Aug-21,Ga,J4,Anlegg,"Vanskelig å se hva som endret seg inne i anlegget. Vi hadde flere krasjer. Vi strammet til og installerte plater, men det er vanskelig å vite hva som endret seg inne i dører","Ta bilder og målinger inne i støpelinjen, slik at parametere dokumenteres og er mulig å sammenligne visuelt hvis noe endres i fremtiden.",Moral,3_Fullførte
-88,10-Aug-21,Vi,J4,Anlegg,Risiko for skade ved åpning av glykolsystemventilen.,"Endre ventilens posisjon, så det er ingen risiko for personskade.",Sikkerhet,3_Fullførte
-89,11-Aug-21,Sø,J4,Anlegg,"Temperaturene på støper 2 er feil, dårligere støping.",Juster temperaturinnstillingene fra PLSer slik at støping er opp til standard.,Kvalitet,3_Fullførte
-90,11-Aug-21,Ki,J4,Anlegg,Mye arbeid med metalltester. Lang vei å gå for å utføre metalltest etter prosedyrer. Det blir mye rot og søppel på baksiden av anlegget.,Snu retningen på utkast båndet slik at alle utkast kommer til fremsiden av anlegget.,Kvalitet,2_Pågående
-91,16-Aug-21,Jø,J4,Anlegg,Teit rekkefølge i oppstart på Smil. Operatører bruker forskjellige sekvenser for å starte anlegget.,Gjennomgå og bli enige om trinnene for å starte anlegget. Lag en sjekkliste med riktig rekkefølge i trinn.,Kvalitet,3_Fullførte
-92,17-Aug-21,Ga,J4,Generell,Det er ikke noe dashvboard for å visualisere KPI-er for Kaizenssystemet,"Bygg en database og dashboard for å visualisere KPI-er. Kaizen per måned, Pågående vs. Fullførte",Moral,3_Fullførte
-93,20-Aug-21,Ji,J4,Generell,Risiko av pallene kan falle ned når folk går. Når man setter to små paller sammen også dytter vi en ny pall på samme hylle så ser vi ikke om pallen beveger på seg på andre siden.,På bakside av pallereol trenger vi noe til å hindre at pallene kan falle ned.,Sikkerhet,2_Pågående
+﻿ID,Dato,Navn,Linje,SGA,Beskrivelse,Løsning,Kriterier,Trinn
+1,11-May-21,Aas,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+2,11-May-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+3,11-May-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+4,11-May-21,Sør,J4,Kartonering,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,2_Pågående
+5,11-May-21,Ton,J4,Schubert,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+6,11-May-21,Sar,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+7,11-May-21,Heg,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+8,11-May-21,Jør,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+9,12-May-21,Vit,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+10,11-May-21,Øyv,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,1_Pending
+11,12-May-21,Vit,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+12,12-May-21,Jir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+13,12-May-21,Moh,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,1_Pending
+14,12-May-21,Els,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,1_Pending
+15,12-May-21,Sim,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+16,12-May-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+17,12-May-21,Sim,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+18,12-May-21,Moh,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+19,12-May-21,Moh,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,1_Pending
+20,12-May-21,Far,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,1_Pending
+21,12-May-21,Jir,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+22,12-May-21,San,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+23,12-May-21,Sar,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+24,12-May-21,Kev,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,1_Pending
+25,12-May-21,Jir,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+26,12-May-21,Sar,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+27,12-May-21,San,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+28,12-May-21,Kev,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+29,12-May-21,Sar,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+30,12-May-21,Jir,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+31,12-May-21,Kev,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+32,12-May-21,Nat,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,1_Pending
+33,12-May-21,Oth,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+34,11-May-21,Oth,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+35,12-May-21,Sør,J4,Kartonering,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+36,12-May-21,Chr,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+37,12-May-21,Chr,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+38,12-May-21,Chr,J4,Schubert,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+39,12-May-21,Moh,J4,Schubert,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,1_Pending
+40,12-May-21,Els,J4,Schubert,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+41,12-May-21,Moh,J4,Kartonering,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+42,12-May-21,Moh,J4,Schubert,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,1_Pending
+43,12-May-21,Moh,J4,Schubert,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+44,12-May-21,Moh,J4,Schubert,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+45,12-May-21,Ole,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+46,12-May-21,San,J4,Kartonering,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+47,12-May-21,Oth,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+48,12-May-21,Nat,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+49,12-May-21,Man,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,1_Pending
+50,12-May-21,Aas,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,2_Pågående
+51,12-May-21,Ole,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+52,19-May-21,Gab,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+53,26-May-21,Gab,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+54,27-May-21,Øyv,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+55,28-May-21,Gab,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,3_Fullførte
+56,28-May-21,Gab,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+57,28-May-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+58,3-Jun-21,Man,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+59,3-Jun-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+60,3-Jun-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+61,3-Jun-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+62,16-Jun-21,Sar,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+63,17-Jun-21,Vit,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,3_Fullførte
+64,17-Jun-21,Moh,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,3_Fullførte
+65,17-Jun-21,Ton,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+66,22-Jun-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+67,22-Jun-21,Kir,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+68,22-Jun-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+69,22-Jun-21,Kir,J4,Kartonering,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,3_Fullførte
+70,24-Jun-21,Jir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,3_Fullførte
+71,25-Jun-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+72,25-Jun-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+73,25-Jun-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+74,28-Jun-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+75,29-Jun-21,Gab,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+76,1-Jul-21,Ton,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+77,1-Jul-21,Ton,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,3_Fullførte
+78,2-Jul-21,Ton,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+79,5-Jul-21,Gab,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,3_Fullførte
+80,7-Jul-21,Aas,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+81,8-Jul-21,Vic,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+82,11-Jul-21,Ali,J4,Kartonering,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+83,15-Jul-21,Oth,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,3_Fullførte
+84,16-Jul-21,Moh,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,3_Fullførte
+85,3-Aug-21,Gab,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+86,4-Aug-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+87,6-Aug-21,Gab,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+88,10-Aug-21,Vit,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,3_Fullførte
+89,11-Aug-21,Sør,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,3_Fullførte
+90,11-Aug-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+91,16-Aug-21,Jør,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,3_Fullførte
+92,17-Aug-21,Gab,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Moral,3_Fullførte
+93,20-Aug-21,Jir,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+94,23-Aug-21,Kev,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+95,23-Aug-21,Kir,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+96,23-Aug-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+97,25-Aug-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+98,26-Aug-21,Øyv,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+99,27-Aug-21,Lai,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+100,1-Sep-21,Evv,J4,Kartonering,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+101,1-Sep-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+102,2-Sep-21,Jir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+103,16-Sep-21,Vic,J4,Generell,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+104,23-Sep-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+105,23-Sep-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+106,23-Sep-21,Kir,J4,Anlegg,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+107,24-Sep-21,Jan,J4,Schubert,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+108,29-Sep-21,Ton,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Kvalitet,2_Pågående
+109,28-Sep-21,Ton,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+110,30-Sep-21,Vic,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,Sikkerhet,2_Pågående
+111,7-Oct-21,Kev,J4,Pakkemaskiner,"Lorem ipsum dolor sit amet, consectetur adipiscing elit",Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium,,2_Pågående
