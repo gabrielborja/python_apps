@@ -1,24 +1,33 @@
+from datetime import date
 import mailbox
+from email.utils import parsedate
 
 class MboxParser():
-    def __init__(self, mbox: str):
-        self.__mbox__ = mbox
-        self.__email_list__ = []
+    def __init__(self, mbox_str: str):
+        self._inbox = mailbox.mbox(mbox_str)
+        self._email_list = []
 
-    def parse_mbox(self: list) -> list:
+    def get_keys(self) -> list:
+        """ Return a list of keys available in mbox file """
+        key_list =  sorted(self._inbox[0].keys())
+        return key_list
+
+    def parse_mbox(self) -> None:
         """ Parse mbox file and extract date and from values """
-        inbox = mailbox.mbox(self.__mbox__)
         for i in range(10):
-            date = inbox[i].get('Date')
-            sender_name = inbox[i].get('From')
+            date = self._inbox[i].get('Date')
+            sender_name = self._inbox[i].get('From')
             my_dict = dict({"date": date, "from": sender_name})
-            self.__email_list__.append(my_dict)
+            self._email_list.append(my_dict)
     
-    def get_emails(self: list) -> list:
-        """ Returns a list of emails parsed by mbox_parser """
-        return self.__email_list__
+    def get_emails(self) -> list:
+        """ Returns a list of sorted emails parsed by mbox_parser method """
+        sorted_emails = sorted(self._email_list, key=lambda d: parsedate(d['date']))
+        return sorted_emails
+
 
 if __name__ == '__main__':
-    emails = MboxParser(mbox='Inbox.mbox')
+    emails = MboxParser(mbox_str='Inbox.mbox')
     emails.parse_mbox()
     print(emails.get_emails())
+    #print(emails.get_keys())
