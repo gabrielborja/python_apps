@@ -1,7 +1,6 @@
 from datetime import date
 import mailbox
 from email.utils import parsedate
-import quopri
 import json
 
 class MboxParser():
@@ -23,19 +22,13 @@ class MboxParser():
             date = self._inbox[i].get('Date')
             if date is not None:
                 sender_name = self._inbox[i].get('From')
-                my_dict = dict({"date": date, "from": sender_name})
+                subject = self._inbox[i].get('Subject')
+                my_dict = dict({"date": date, "from": sender_name, "subject": subject})
                 self._email_list.append(my_dict)
     
     def get_emails(self) -> list:
-        """ Returns a list of dictionaries of parsed emails """
+        """ Returns a list of the first five parsed emails """
         return self._email_list[:5]
-    
-    def decode_ascii(self, x: str) -> str:
-        """ Decode ascii code to utf-8 """
-        try:
-            return quopri.decodestring(x).decode(encoding='utf-8')
-        except UnicodeDecodeError:
-            return x
     
     def _parse_date(self, email: str) -> date:
         """ Return a parsed date from a formatted date string """
@@ -66,7 +59,7 @@ class MboxParser():
 
 
 if __name__ == '__main__':
-    emails = MboxParser(mbox_str='Inbox.mbox')
+    emails = MboxParser(mbox_str='Inbox-001.mbox')
     emails.parse_mbox()
     emails.sort_emails()
     print(emails.get_emails()) # => List five records
